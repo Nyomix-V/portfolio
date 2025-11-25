@@ -1,0 +1,314 @@
+/* ===========================
+   ANIMATIONS
+   =========================== */
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; } 
+}
+
+/* ===========================
+   GLOBAL / BODY
+   =========================== */
+body {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  background-color: #1a1a1a; 
+  /* Motif pointillé subtil */
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 0);
+  background-size: 4px 4px;
+  background-position: -19px -19px;
+}
+
+/* ===========================
+   NAVBAR & FOOTER
+   =========================== */
+nav, footer, .page-footer {
+  background: linear-gradient(-45deg, #e73c7e, #6c2775, #db65ff, #23cfd5);
+  background-size: 400% 400%;
+  animation: gradient-animation 20s ease infinite;
+}
+
+nav a, footer a {
+  color: #fff !important;
+}
+
+nav .brand-logo {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* ===========================
+   SECTIONS GÉNÉRALES
+   =========================== */
+.section {
+  display: flex;
+  flex-direction: column; 
+  gap: 15px; 
+  
+  background: #d1c4e9; /* Fond violet clair */
+  color: #333; /* Texte sombre pour lisibilité */
+  
+  padding: 30px 20px; 
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  margin-bottom: 5vh;
+  margin-top: 5vh;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #4a148c; /* Violet foncé pour les titres */
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+/* ===========================
+   HERO SECTION
+   =========================== */
+.section.hero-section { 
+  background: transparent;
+  box-shadow: none;
+  color: #fff;
+  
+  min-height: 85vh; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.section.hero-section h1 {
+  font-weight: 700;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+  margin-bottom: 10px;
+}
+
+.section.hero-section h4 {
+  color: #f3e5f5;
+  font-weight: 300;
+  margin-bottom: 40px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+/* ===========================
+   TIMELINE (PARCOURS)
+   =========================== */
+.timeline {
+  position: relative;
+  margin-top: 20px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 40px;
+  width: 4px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 50px;
+  position: relative;
+  align-items: flex-start;
+}
+
+.timeline-img {
+  width: 80px;
+  min-width: 80px;
+  height: 80px;
+  z-index: 2;
+  background: #d1c4e9;
+  border-radius: 50%;
+  padding: 5px;
+  border: 3px solid #fff;
+  overflow: hidden;
+}
+
+.timeline-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.timeline-content {
+  margin-left: 30px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.timeline-content h5 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.timeline-content .badge {
+  margin-left: 0;
+  float: none;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+/* ===========================
+   CARTES PROJETS (LA CORRECTION)
+   =========================== */
+
+/* 1. Structure de la grille */
+#projets .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#projets .col {
+  display: flex;
+  align-items: stretch; /* Force les colonnes à la même hauteur */
+}
+
+/* 2. Style de la carte */
+#projets .card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  
+  /* HAUTEUR MINIMALE : C'est ça qui empêche l'écrasement */
+  min-height: 600px; 
+  
+  border-radius: 12px;
+  border: none;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+/* 3. Image fixe */
+#projets .card .card-image {
+  flex-shrink: 0; /* Empêche l'image de rétrécir */
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+#projets .card .card-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+#projets .card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+/* 4. Contenu flexible */
+#projets .card .card-content {
+  flex-grow: 1; /* Prend tout l'espace disponible */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: #333;
+}
+
+#projets .card-title {
+  font-weight: bold;
+  font-size: 1.3rem !important;
+  line-height: 1.3 !important;
+  margin-bottom: 10px !important;
+  display: block;
+}
+
+/* 5. Les Tags (Chips) */
+.tech-tags {
+  /* Cette ligne est cruciale : elle pousse les tags vers le bas */
+  margin-top: auto; 
+  
+  padding-top: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-tags .chip {
+  background-color: #f3e5f5;
+  color: #6a1b9a;
+  margin: 0;
+  font-weight: 500;
+  height: 32px;
+  line-height: 32px;
+}
+
+/* 6. Zone des liens (Action) */
+#projets .card .card-action {
+  flex-shrink: 0; /* Ne rétrécit jamais */
+  background-color: #f9f9f9;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding: 15px 20px;
+  z-index: 10;
+}
+
+#projets .card .card-action a {
+  margin-right: 20px !important;
+  color: #7b1fa2 !important; /* Purple darken-2 */
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+/* Badges */
+.badge-grand-prix {
+  background: linear-gradient(45deg, #FFD700, #FFC107);
+  color: #000 !important;
+  font-weight: bold;
+  padding: 8px 15px;
+  top: 15px !important;
+  bottom: auto !important;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  width: auto;
+}
+
+.badge-wip {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff !important;
+  padding: 8px 15px;
+  top: 15px !important;
+  bottom: auto !important;
+}
+
+/* ===========================
+   COLLECTIONS (Compétences)
+   =========================== */
+.collection {
+  border: none;
+  background: transparent;
+}
+.collection .collection-item {
+  background-color: rgba(255,255,255,0.6);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 600px) {
+  .section h2 { font-size: 2rem; }
+  
+  .timeline::before { left: 30px; }
+  .timeline-img {
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+  }
+  .timeline-content h5 { font-size: 1.1rem; }
+}

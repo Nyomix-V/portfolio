@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Victor Mathieu</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo center">Victor M.</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#hero">Accueil</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#histoire">Parcours</a></li>
+        <li><a href="#competences">Compétences</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="#hero">Accueil</a></li>
+    <li><a href="#projets">Projets</a></li>
+    <li><a href="#histoire">Parcours</a></li>
+    <li><a href="#competences">Compétences</a></li>
+  </ul>
+
+  <div class="container">
+
+    <section id="hero" class="section hero-section center-align">
+      <h1>Victor Mathieu</h1>
+      <h4>Développeur Web & IoT | Architecte Logiciel</h4>
+      <p class="flow-text">
+        De la gestion de chantier à l'architecture logicielle.<br>
+        Je conçois des solutions robustes, innovantes et connectées.
+      </p>
+      <br>
+      <a href="#projets" class="btn-large waves-effect waves-light purple darken-1 pulse">
+        <i class="material-icons right">arrow_forward</i>Découvrir mes projets
+      </a>
+    </section>
+
+    <section id="projets" class="section">
+      <h2 class="center-align">Mes Projets Phares</h2>
+      
+      <div class="row">
+        
+        <div class="col s12 m6">
+          <div class="card hoverable">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="assets/img/Eligence.png" alt="Interface IA4PME">
+              <span class="card-title badge-grand-prix">🏆 Grand Prix du Jury 2025</span>
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Eligence - Fullstack IA<i class="material-icons right">more_vert</i></span>
+              <p>Guichet intelligent d'aides aux entreprises.</p>
+              
+              <div class="tech-tags">
+                <span class="chip">Next.js 14 / TS</span>
+                <span class="chip">Supabase (PostgreSQL)</span>
+                <span class="chip">Claude 3.5 API</span>
+              </div>
+
+              <div class="card-action">
+                <a href="https://hackathon-zeta-rose.vercel.app/" target="_blank" class="purple-text text-darken-2">Voir la Démo</a>
+                <a href="https://ia4pme.code4sud.fr/" target="_blank" class="purple-text text-darken-2">Présentation</a>
+              </div>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Stack Technique<i class="material-icons right">close</i></span>
+              <p><strong>Architecture :</strong> Monolithe Fullstack Next.js 14 (App Router) déployé sur Vercel (Serverless).</p>
+              <ul>
+                <li><strong>Backend :</strong> API Routes serverless, validation Zod.</li>
+                <li><strong>Data :</strong> Supabase (Auth + RLS Security) & API INSEE Sirene V3.</li>
+                <li><strong>IA Core :</strong> Prompt Engineering contextuel sur Claude 3.5 Sonnet pour générer des recommandations financières temps réel.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6">
+          <div class="card hoverable">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="https://placehold.co/600x400/333/white?text=Bras+Robotique+IoT" alt="Bras Robotique Prototype">
+              <span class="card-title badge-wip">🚧 En Cours</span>
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Bras Robotique IoT<i class="material-icons right">more_vert</i></span>
+              <p>Système mécatronique piloté par série.</p>
+
+              <div class="tech-tags">
+                <span class="chip">C++ (Embedded)</span>
+                <span class="chip">Arduino / PWM</span>
+                <span class="chip">Python / UART</span>
+              </div>
+
+              <div class="card-action">
+                <a href="https://github.com/Nyomix-V" target="_blank" class="purple-text text-darken-2">Code sur GitHub</a>
+              </div>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Détails Ingénierie<i class="material-icons right">close</i></span>
+              <p><strong>Objectif :</strong> Maîtriser la chaîne Hardware -> Firmware -> Software.</p>
+              <ul>
+                <li><strong>Firmware (C++) :</strong> Gestion des Timers & Interruptions pour signaux PWM précis. Interpréteur de commandes embarqué.</li>
+                <li><strong>Architecture :</strong> Maître/Esclave. Script Python envoyant des instructions via port Série (UART) à l'Arduino.</li>
+                <li><strong>Élec :</strong> Alimentation découplée et sécurités logicielles (bornage angulaire).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="histoire" class="section">
+      <h2 class="center-align">Mon Parcours Atypique</h2>
+      <p class="center-align">De la technique au management, puis retour à la passion du code.</p>
+      
+      <div class="timeline">
+        
+        <div class="timeline-item">
+          <div class="timeline-img">
+            <img src="assets/img/Epitech.png" alt="Epitech" class="circle responsive-img">
+          </div>
+          <div class="timeline-content">
+            <h5>Aujourd'hui - Architecte Logiciel</h5>
+            <span class="badge purple darken-2 white-text">EPITECH - Niv. 7</span>
+            <p>
+              <strong>Spécialisation IoT & AR/VR</strong> (Internet of Things / Réalité Virtuelle).<br>
+              Je synthétise toutes mes expériences pour concevoir des architectures connectées complexes.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-img">
+             <img src="assets/img/Trasomar.png" alt="Trasomar" class="circle responsive-img">
+          </div>
+          <div class="timeline-content">
+            <h5>2024 / 2025 - Rigueur & Terrain</h5>
+            <span class="badge blue darken-3 white-text">TRASOMAR</span>
+            <p>
+              <strong>Homme de pont & Pilote d'engins (Travaux Maritimes & CACES).</strong><br>
+              Conduite de Pelle >6T et Grue. Une expérience intense qui m'a forgé un mental d'acier : gestion du stress, sécurité absolue et précision millimétrique.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-img">
+             <img alt="Management" class="circle responsive-img">
+          </div>
+          <div class="timeline-content">
+            <h5>2019 / 2024 - Management & Humain</h5>
+            <span class="badge pink lighten-1 white-text">Yo&Co / Sushi Spot</span>
+            <p>
+              <strong>Manager d'établissement.</strong><br>
+              Alternant chez <strong>Yo&Co</strong> et ambauché par la suite.<br>Deuxième expérience chez <strong>Sushi Spot</strong>.<br>
+              Management d'équipes (7 personnes), pilotage des stocks et relation client. J'ai appris à écouter et qualifier les besoins avec précision.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-img">
+             <img src="https://placehold.co/150x150/png?text=SN" alt="Lycée" class="circle responsive-img">
+          </div>
+          <div class="timeline-content">
+            <h5>2019 - Les racines techniques</h5>
+            <span class="badge teal lighten-1 white-text">Bac Pro Systèmes Numériques</span>
+            <p>
+              Mes premiers pas dans le hardware, les réseaux et l'électronique. La base logique qui me sert aujourd'hui en IoT.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="competences" class="section">
+      <h2 class="center-align">Compétences Techniques</h2>
+      <div class="row">
+        <div class="col s12 m6">
+          <h5><i class="material-icons left">code</i> Développement</h5>
+          <ul class="collection">
+            <li class="collection-item"><strong>Web :</strong> HTML/CSS, JS, Next.js, React, Tailwind</li>
+            <li class="collection-item"><strong>Backend/Data :</strong> Node.js, Python, SQL (PostgreSQL/Supabase)</li>
+            <li class="collection-item"><strong>IoT/Bas niveau :</strong> C++, C, Arduino, Liaison Série</li>
+          </ul>
+        </div>
+        <div class="col s12 m6">
+          <h5><i class="material-icons left">build</i> Savoir-être & Outils</h5>
+          <ul class="collection">
+            <li class="collection-item">Gestion de projet (Méthodes Agiles)</li>
+            <li class="collection-item">Travail d'équipe & Leadership</li>
+            <li class="collection-item">Git / GitHub / Vercel</li>
+            <li class="collection-item">Permis B (Véhiculé)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Victor Mathieu</h5>
+          <p class="grey-text text-lighten-4">
+            À la recherche d'une alternance ou d'opportunités en développement Web & IoT.
+          </p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Contact</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="mailto:victor.mathieu@epitech.eu"><i class="material-icons tiny">email</i> victor.mathieu@epitech.eu</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/victor-mathieu-dev-ia-web-linkdin-personal" target="_blank">LinkedIn</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://github.com/Nyomix-V" target="_blank">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2025 Victor Mathieu - Portfolio
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
