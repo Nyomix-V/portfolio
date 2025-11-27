@@ -161,7 +161,7 @@ nav .brand-logo {
 }
 
 /* ===========================
-   CARTES PROJETS (LA CORRECTION)
+   CARTES PROJETS
    =========================== */
 
 /* 1. Structure de la grille */
@@ -172,7 +172,7 @@ nav .brand-logo {
 
 #projets .col {
   display: flex;
-  align-items: stretch; /* Force les colonnes à la même hauteur */
+  align-items: stretch; 
 }
 
 /* 2. Style de la carte */
@@ -181,7 +181,7 @@ nav .brand-logo {
   flex-direction: column;
   width: 100%;
   
-  /* HAUTEUR MINIMALE : C'est ça qui empêche l'écrasement */
+  /* HAUTEUR MINIMALE */
   min-height: 600px; 
   
   border-radius: 12px;
@@ -192,7 +192,7 @@ nav .brand-logo {
 
 /* 3. Image fixe */
 #projets .card .card-image {
-  flex-shrink: 0; /* Empêche l'image de rétrécir */
+  flex-shrink: 0; 
   height: 220px;
   overflow: hidden;
   position: relative;
@@ -202,6 +202,7 @@ nav .brand-logo {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  object-position: top center; /* Image calée en haut */
   transition: transform 0.5s ease;
 }
 
@@ -211,7 +212,7 @@ nav .brand-logo {
 
 /* 4. Contenu flexible */
 #projets .card .card-content {
-  flex-grow: 1; /* Prend tout l'espace disponible */
+  flex-grow: 1; 
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -228,9 +229,7 @@ nav .brand-logo {
 
 /* 5. Les Tags (Chips) */
 .tech-tags {
-  /* Cette ligne est cruciale : elle pousse les tags vers le bas */
   margin-top: auto; 
-  
   padding-top: 15px;
   margin-bottom: 10px;
   display: flex;
@@ -249,7 +248,7 @@ nav .brand-logo {
 
 /* 6. Zone des liens (Action) */
 #projets .card .card-action {
-  flex-shrink: 0; /* Ne rétrécit jamais */
+  flex-shrink: 0; 
   background-color: #f9f9f9;
   border-top: 1px solid rgba(0,0,0,0.1);
   padding: 15px 20px;
@@ -264,25 +263,37 @@ nav .brand-logo {
   font-size: 0.9rem;
 }
 
-/* Badges */
+/* --- BADGES "MINIATURES" --- */
+
+/* On cible les deux types de badges pour appliquer la taille réduite */
+.badge-grand-prix, .badge-wip {
+  font-size: 0.75rem !important; /* Texte beaucoup plus petit (env 12px) */
+  line-height: normal !important;
+  padding: 5px 10px !important; /* Marges internes très réduites */
+  
+  top: 10px !important;
+  bottom: auto !important;
+  left: 0 !important; /* Collé à gauche */
+  
+  width: auto !important; /* Le badge s'adapte à la taille du texte */
+  border-radius: 0 4px 4px 0; /* Arrondi seulement à droite */
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  z-index: 5;
+}
+
 .badge-grand-prix {
   background: linear-gradient(45deg, #FFD700, #FFC107);
   color: #000 !important;
   font-weight: bold;
-  padding: 8px 15px;
-  top: 15px !important;
-  bottom: auto !important;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-  width: auto;
 }
 
 .badge-wip {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.85);
   color: #fff !important;
-  padding: 8px 15px;
-  top: 15px !important;
-  bottom: auto !important;
+  font-weight: 500;
 }
+/* ----------------------------------- */
+
 
 /* ===========================
    COLLECTIONS (Compétences)
@@ -299,7 +310,7 @@ nav .brand-logo {
 }
 
 /* ===========================
-   RESPONSIVE
+   RESPONSIVE (Mobile)
    =========================== */
 @media (max-width: 600px) {
   .section h2 { font-size: 2rem; }
@@ -311,4 +322,9 @@ nav .brand-logo {
     height: 60px;
   }
   .timeline-content h5 { font-size: 1.1rem; }
+
+  /* Image un peu plus petite sur mobile */
+  #projets .card .card-image {
+    height: 180px; 
+  }
 }
