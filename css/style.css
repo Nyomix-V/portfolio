@@ -23,6 +23,11 @@ body {
 /* ===========================
    NAVBAR & FOOTER
    =========================== */
+/* MODIFICATION ICI : On s'assure que la navbar fixe est bien au-dessus (z-index) */
+.navbar-fixed nav {
+  z-index: 999;
+}
+
 nav, footer, .page-footer {
   background: linear-gradient(-45deg, #e73c7e, #6c2775, #db65ff, #23cfd5);
   background-size: 400% 400%;
@@ -36,6 +41,19 @@ nav a, footer a {
 nav .brand-logo {
   font-weight: bold;
   letter-spacing: 1px;
+}
+
+/* MODIFICATION ICI : Style spécifique pour le bouton dans la navbar */
+nav ul li .btn {
+  margin-top: -2px; /* Petit alignement vertical */
+  background-color: rgba(255, 255, 255, 0.2); /* Fond semi-transparent */
+  border: 1px solid #fff;
+  box-shadow: none;
+}
+
+nav ul li .btn:hover {
+  background-color: #fff;
+  color: #d81b60 !important; /* Texte rose au survol */
 }
 
 /* ===========================
