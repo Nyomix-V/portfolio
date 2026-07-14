@@ -214,10 +214,8 @@ nav ul li .btn:hover {
   display: flex;
   flex-direction: column;
   width: 100%;
-  
-  /* HAUTEUR MINIMALE */
-  min-height: 600px; 
-  
+  min-height: 420px;
+
   border-radius: 12px;
   border: none;
   background-color: #fff;
@@ -226,8 +224,8 @@ nav ul li .btn:hover {
 
 /* 3. Image fixe */
 #projets .card .card-image {
-  flex-shrink: 0; 
-  height: 220px;
+  flex-shrink: 0;
+  height: 240px;
   overflow: hidden;
   position: relative;
 }
@@ -236,7 +234,7 @@ nav ul li .btn:hover {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  object-position: top center; /* Image calée en haut */
+  object-position: center center;
   transition: transform 0.5s ease;
 }
 
