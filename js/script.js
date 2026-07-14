@@ -7,6 +7,18 @@ document.addEventListener('DOMContentLoaded', function() {
         edge: 'left' 
     });
 
-    // Effet d'apparition au scroll (optionnel mais sympa)
-    // On peut ajouter d'autres inits Materialize ici si besoin
+    // Effet d'apparition au scroll
+    var revealElems = document.querySelectorAll('.reveal');
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    revealElems.forEach(function(el) {
+        observer.observe(el);
+    });
 });
