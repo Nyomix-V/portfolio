@@ -97,12 +97,19 @@ nav ul li .btn:hover {
 }
 
 .hero-photo {
-  width: 160px;
-  height: 160px;
+  width: 260px;
+  height: 260px;
   object-fit: cover;
-  border: 4px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  border: 5px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 25px rgba(0,0,0,0.5);
   margin-bottom: 25px;
+}
+
+@media (max-width: 600px) {
+  .hero-photo {
+    width: 180px;
+    height: 180px;
+  }
 }
 
 .section.hero-section h1 {
@@ -288,6 +295,32 @@ nav ul li .btn:hover {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 0.9rem;
+}
+
+/* 7. Mini galerie (photos supplémentaires dans le card-reveal) */
+.mini-gallery {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.mini-gallery a {
+  flex: 1;
+  display: block;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 80px;
+}
+
+.mini-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.mini-gallery a:hover img {
+  transform: scale(1.08);
 }
 
 /* --- BADGES "MINIATURES" --- */
