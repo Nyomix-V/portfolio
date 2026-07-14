@@ -60,7 +60,7 @@
       
       <div class="row">
         
-        <div class="col s12 m6">
+        <div class="col s12 m6 l4">
           <div class="card hoverable">
             <div class="card-image waves-effect waves-block waves-light">
               <img class="activator" src="assets/img/Eligence.png" alt="Interface IA4PME">
@@ -93,20 +93,20 @@
           </div>
         </div>
 
-        <div class="col s12 m6">
+        <div class="col s12 m6 l4">
           <div class="card hoverable">
             <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="https://placehold.co/600x400/333/white?text=Bras+Robotique+IoT" alt="Bras Robotique Prototype">
+              <img class="activator" src="https://placehold.co/600x400/333/white?text=Main+Robotique+IoT" alt="Main Robotique Connectée">
               <span class="card-title badge-wip">🚧 En Cours</span>
             </div>
             <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Bras Robotique IoT<i class="material-icons right">more_vert</i></span>
-              <p>Système mécatronique piloté par série.</p>
+              <span class="card-title activator grey-text text-darken-4">Main Robotique Connectée (InMoov)<i class="material-icons right">more_vert</i></span>
+              <p>Main robotique 5 doigts pilotée par servomoteurs.</p>
 
               <div class="tech-tags">
-                <span class="chip">C++ (Embedded)</span>
-                <span class="chip">Arduino / PWM</span>
-                <span class="chip">Python / UART</span>
+                <span class="chip">C (Arduino)</span>
+                <span class="chip">Python / Tkinter</span>
+                <span class="chip">Web (HTML/CSS/JS)</span>
               </div>
 
               <div class="card-action">
@@ -115,11 +115,39 @@
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Détails Ingénierie<i class="material-icons right">close</i></span>
-              <p><strong>Objectif :</strong> Maîtriser la chaîne Hardware -> Firmware -> Software.</p>
+              <p><strong>Objectif :</strong> Maîtriser la chaîne Hardware -> Firmware -> Software, avec une architecture pilotable à distance.</p>
               <ul>
-                <li><strong>Firmware (C++) :</strong> Gestion des Timers & Interruptions pour signaux PWM précis. Interpréteur de commandes embarqué.</li>
-                <li><strong>Architecture :</strong> Maître/Esclave. Script Python envoyant des instructions via port Série (UART) à l'Arduino.</li>
-                <li><strong>Élec :</strong> Alimentation découplée et sécurités logicielles (bornage angulaire).</li>
+                <li><strong>Firmware (C) :</strong> Pilotage de 5 servomoteurs (un par doigt) sur Arduino, réception de commandes série au format "id:angle" (parsing sscanf).</li>
+                <li><strong>Interface actuelle :</strong> Application desktop Python/Tkinter avec sliders temps réel envoyant les commandes en série (USB).</li>
+                <li><strong>En développement :</strong> Interface web de contrôle (HTML/CSS/JS), avec passage prévu au pilotage sans fil via un Arduino R4 WiFi.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l4">
+          <div class="card hoverable">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="https://placehold.co/600x400/6a1b9a/white?text=App+Mobile+Flutter" alt="Application mobile Flutter">
+              <span class="card-title badge-wip">💼 Projet Entrepreneurial</span>
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Application Mobile Multiplateforme<i class="material-icons right">more_vert</i></span>
+              <p>App iOS/Android de bout en bout, destinée à la commercialisation.</p>
+
+              <div class="tech-tags">
+                <span class="chip">Flutter / Dart</span>
+                <span class="chip">Supabase (RLS)</span>
+                <span class="chip">Achats in-app</span>
+              </div>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Stack Technique<i class="material-icons right">close</i></span>
+              <p><strong>Architecture :</strong> Base de code unique Flutter (iOS/Android), back-end Supabase sécurisé par des politiques RLS.</p>
+              <ul>
+                <li><strong>Fonctionnalités :</strong> Authentification, achats in-app, géolocalisation et traitement d'image temps réel via la caméra.</li>
+                <li><strong>Data :</strong> Migrations SQL versionnées, tests unitaires.</li>
+                <li><strong>Organisation :</strong> Architecture en couches, pensée pour un produit destiné à la commercialisation.</li>
               </ul>
             </div>
           </div>
@@ -139,8 +167,8 @@
             <img src="assets/img/Epitech.png" alt="Epitech" class="circle responsive-img">
           </div>
           <div class="timeline-content">
-            <h5>Aujourd'hui - Architecte Logiciel</h5>
-            <span class="badge purple darken-2 white-text">EPITECH - Niv. 7</span>
+            <h5>2025 / 2028 - Architecte de Systèmes d'Information</h5>
+            <span class="badge purple darken-2 white-text">EPITECH - RNCP Niv. 7</span>
             <p>
               <strong>Spécialisation IoT & AR/VR</strong> (Internet of Things / Réalité Virtuelle).<br>
               Je synthétise toutes mes expériences pour concevoir des architectures connectées complexes.
@@ -167,12 +195,26 @@
              <img alt="Management" class="circle responsive-img">
           </div>
           <div class="timeline-content">
-            <h5>2019 / 2024 - Management & Humain</h5>
+            <h5>2021 / 2023 - Management & Humain</h5>
             <span class="badge pink lighten-1 white-text">Yo&Co / Sushi Spot</span>
             <p>
               <strong>Manager d'établissement.</strong><br>
-              Alternant chez <strong>Yo&Co</strong> et ambauché par la suite.<br>Deuxième expérience chez <strong>Sushi Spot</strong>.<br>
+              Alternant chez <strong>Yo&Co</strong> et embauché par la suite.<br>Deuxième expérience chez <strong>Sushi Spot</strong>.<br>
               Management d'équipes (7 personnes), pilotage des stocks et relation client. J'ai appris à écouter et qualifier les besoins avec précision.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-img">
+             <img src="https://placehold.co/150x150/png?text=BTS" alt="ESCO Wesford" class="circle responsive-img">
+          </div>
+          <div class="timeline-content">
+            <h5>2021 - Bases du Commerce & de la Gestion</h5>
+            <span class="badge blue-grey darken-1 white-text">BTS MCO - ESCO WESFORD</span>
+            <p>
+              <strong>BTS Management Commercial Opérationnel</strong>, obtenu en alternance chez Yo&Co.<br>
+              Premières bases de gestion, d'analyse des besoins et de suivi budgétaire.
             </p>
           </div>
         </div>
@@ -196,21 +238,47 @@
     <section id="competences" class="section">
       <h2 class="center-align">Compétences Techniques</h2>
       <div class="row">
-        <div class="col s12 m6">
-          <h5><i class="material-icons left">code</i> Développement</h5>
+        <div class="col s12 m6 l4">
+          <h5><i class="material-icons left">dns</i> Back-end</h5>
           <ul class="collection">
-            <li class="collection-item"><strong>Web :</strong> HTML/CSS, JS, Next.js, React, Tailwind</li>
-            <li class="collection-item"><strong>Backend/Data :</strong> Node.js, Python, SQL (PostgreSQL/Supabase)</li>
-            <li class="collection-item"><strong>IoT/Bas niveau :</strong> C++, C, Arduino, Liaison Série</li>
+            <li class="collection-item">PHP · Java · Python</li>
+            <li class="collection-item">SQL · PostgreSQL / Supabase</li>
           </ul>
         </div>
-        <div class="col s12 m6">
-          <h5><i class="material-icons left">build</i> Savoir-être & Outils</h5>
+        <div class="col s12 m6 l4">
+          <h5><i class="material-icons left">code</i> Front-end</h5>
           <ul class="collection">
-            <li class="collection-item">Gestion de projet (Méthodes Agiles)</li>
-            <li class="collection-item">Travail d'équipe & Leadership</li>
-            <li class="collection-item">Git / GitHub / Vercel</li>
-            <li class="collection-item">Permis B (Véhiculé)</li>
+            <li class="collection-item">HTML/CSS · JavaScript</li>
+            <li class="collection-item">Flutter · Dart</li>
+          </ul>
+        </div>
+        <div class="col s12 m6 l4">
+          <h5><i class="material-icons left">memory</i> Embarqué / IoT</h5>
+          <ul class="collection">
+            <li class="collection-item">C (Arduino) · Arduino R4 UNO WiFi</li>
+            <li class="collection-item">Servomoteurs</li>
+          </ul>
+        </div>
+        <div class="col s12 m6 l4">
+          <h5><i class="material-icons left">build</i> Outils & Méthodes</h5>
+          <ul class="collection">
+            <li class="collection-item">Git / GitHub · Docker (notions)</li>
+            <li class="collection-item">Tests unitaires · Architecture en couches</li>
+            <li class="collection-item">Impression 3D</li>
+          </ul>
+        </div>
+        <div class="col s12 m6 l4">
+          <h5><i class="material-icons left">groups</i> Soft Skills</h5>
+          <ul class="collection">
+            <li class="collection-item">Organisation · Coordination d'équipe</li>
+            <li class="collection-item">Analyse des besoins · Suivi budgétaire</li>
+          </ul>
+        </div>
+        <div class="col s12 m6 l4">
+          <h5><i class="material-icons left">language</i> Langues</h5>
+          <ul class="collection">
+            <li class="collection-item">Français (maternel)</li>
+            <li class="collection-item">Anglais (B2)</li>
           </ul>
         </div>
       </div>
@@ -224,15 +292,18 @@
         <div class="col l6 s12">
           <h5 class="white-text">Victor Mathieu</h5>
           <p class="grey-text text-lighten-4">
-            À la recherche d'une alternance ou d'opportunités en développement Web & IoT.
+            Recherche une alternance de 2 ans (dev Web & IoT) — disponible immédiatement ou à la rentrée 2026.
           </p>
         </div>
         <div class="col l4 offset-l2 s12">
           <h5 class="white-text">Contact</h5>
           <ul>
             <li><a class="grey-text text-lighten-3" href="mailto:victor.mathieu@epitech.eu"><i class="material-icons tiny">email</i> victor.mathieu@epitech.eu</a></li>
+            <li><span class="grey-text text-lighten-3"><i class="material-icons tiny">phone</i> 06.10.26.25.68</span></li>
             <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/victor-mathieu-dev-ia-web-linkdin-personal" target="_blank">LinkedIn</a></li>
             <li><a class="grey-text text-lighten-3" href="https://github.com/Nyomix-V" target="_blank">GitHub</a></li>
+            <li><span class="grey-text text-lighten-3"><i class="material-icons tiny">directions_car</i> Permis B (Véhiculé)</span></li>
+            <li><span class="grey-text text-lighten-3"><i class="material-icons tiny">accessible</i> RQTH</span></li>
           </ul>
         </div>
       </div>

@@ -1,0 +1,12 @@
+# Claude Code local config (dev server config, local permissions)
+.claude/
+
+# Editor
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node (au cas où des outils front seraient ajoutés plus tard)
+node_modules/
